@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.hide-scrollbar {
+  overflow-x: auto; /* Menyembunyikan scrollbar, tetapi tetap memungkinkan scroll */
+  -webkit-overflow-scrolling: touch; /* Membuat scroll lebih halus di perangkat sentuh */
+  scrollbar-width: none; /* Menyembunyikan scrollbar di Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Menyembunyikan scrollbar di browser berbasis WebKit (Chrome, Safari, dll.) */
+}
+
+/* styles.css */
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #fff;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
